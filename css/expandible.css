@@ -1,0 +1,65 @@
+.card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.card-body {
+  padding: 10px;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  margin-bottom: 5px; /* Espacio entre texto y botón */
+}
+
+.card.expanded .card-body {
+  max-height: 200px; /* Ajusta según la altura de tu contenido */
+}
+
+.card-footer {
+  padding: 10px;
+  text-align: center;
+}
+
+#card-text { /* Ocultar el texto inicialmente */
+  display: none;
+}
+
+.card.expanded #card-text { /* Mostrar el texto cuando la tarjeta está expandida */
+  display: block;
+}
+
+.sizedBox{
+  height: 20px;
+}
+
+.expand-btn {
+  background-color: #1e6495;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.contenedor{
+  display: auto;
+  flex-direction: column; /* Organizar elementos en columna */
+  gap: 20px;
+}
+
+.second-section {
+  padding-top: 50;
+  padding-bottom: 50px;
+  display: block;
+  position: relative;
+  z-index: 120;
+}
