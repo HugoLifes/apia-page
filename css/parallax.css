@@ -1,0 +1,153 @@
+.parallax {
+    background-color: #015383; /* Reemplaza con tu imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* Cubrir todo el contenedor */
+    min-height: 450px; /* Altura mínima para el efecto parallax */
+  }
+  
+
+  .parallax-content {
+    position: relative;
+    z-index: 1; 
+    padding: 10px;
+    text-align: center;
+    color: white; 
+    
+  }
+
+  span{
+    font-weight: bold;
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  li{
+    font-weight: 2.5em;
+  }
+
+  .parallax-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parallax-layer {
+    position: absolute; /* Posicionar los elementos de forma absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Centrar el texto vertical y horizontalmente */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .layer1 {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente (opcional) */
+    transform: translateY(0%); /* Posición inicial del texto 1 */
+  }
+  
+  .layer2 {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente (opcional) */
+    transform: translateY(50%); /* Posición inicial del texto 2 */
+  }
+  
+  .layer3 {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente (opcional) */
+    transform: translateY(100%); /* Posición inicial del texto 3 */
+  }
+  
+  .parallax:hover .layer1 {
+    transform: translateY(-20%); /* Desplazamiento del texto 1 al pasar el mouse */
+  }
+  
+  .parallax:hover .layer2 {
+    transform: translateY(30%);  /* Desplazamiento del texto 2 al pasar el mouse */
+  }
+  
+  .parallax:hover .layer3 {
+    transform: translateY(80%);  /* Desplazamiento del texto 3 al pasar el mouse */
+  }
+
+  .parallax-layer i {
+    font-size: 100px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
+
+  .parallax-layer span {
+    font-size: 1.8em; /* Tamaño del texto */
+  }
+  
+  .parallax-layer img {
+    width: 30px; /* Ancho de la imagen */
+    height: 30px; /* Alto de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }
+
+  .services {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    margin-bottom: 10px; /* Espacio entre los servicios */
+    /* Activar Flexbox */
+    align-items: center; /* Alinear verticalmente */
+  }
+  
+  .services.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .iconedit{
+    font-size:10em
+  }
+
+  /* Media Query para pantallas pequeñas (por ejemplo, tablets) */
+@media (max-width: 768px) {
+    .parallax {
+      background-attachment: scroll; /* Desactivar parallax en pantallas pequeñas */
+      min-height: 200px; /* Ajustar altura mínima */
+    }
+
+    i {
+      font-size: 2.5em; /* Ajustar tamaño de fuente */
+    }
+  
+    span {
+      font-size: 1.5em; /* Ajustar tamaño de fuente */
+    }
+  
+    h5 {
+      font-size: 1.5em; /* Ajustar tamaño de fuente del título */
+    }
+  
+    .parallax-layer {
+      transform: none; /* Desactivar desplazamiento inicial */
+    }
+  
+    .parallax:hover .parallax-layer {
+      transform: none; /* Desactivar desplazamiento al pasar el mouse */
+    }
+  }
+  
+  /* Media Query para pantallas muy pequeñas (por ejemplo, móviles) */
+  @media (max-width: 480px) {
+    .parallax {
+      min-height: 100px; /* Ajustar altura mínima */
+    }
+    i {
+      font-size: 2.5em; /* Ajustar tamaño de fuente */
+    }
+  
+    span {
+      font-size: 1.5em; /* Ajustar tamaño de fuente */
+    }
+  
+    h5 {
+      font-size: 1.5em; /* Ajustar tamaño de fuente del título */
+    }
+  }
